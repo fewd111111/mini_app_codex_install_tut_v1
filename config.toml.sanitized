@@ -1,0 +1,23 @@
+model = "deepseek-v4-flash"
+model_provider = "deepseek"
+model_reasoning_effort = "xhigh"
+
+# Login via API key (avoids opening the ChatGPT login page)
+preferred_auth_method = "apikey"
+forced_login_method = "api"
+
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+personality = "pragmatic"
+
+[model_providers.deepseek]
+name = "deepseek"
+base_url = "http://127.0.0.1:8787/"
+wire_api = "responses"
+experimental_bearer_token = "<YOUR_API_KEY>"
+
+[projects."/var/minis/shared/codex-lab/testrepo"]
+trust_level = "trusted"
+
+[projects."/root"]
+trust_level = "trusted"
